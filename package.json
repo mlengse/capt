@@ -1,0 +1,23 @@
+{
+  "name": "capt",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlengse/capt.git"
+  },
+  "author": "mlengse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mlengse/capt/issues"
+  },
+  "homepage": "https://github.com/mlengse/capt#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "puppeteer-core": "^8.0.0"
+  }
+}
