@@ -4,8 +4,6 @@ const {
   createWriteStream
 } = require('fs')
 
-const path = require('path')
-
 exports._runScript = async ({ that }) => {
   await that.page.goto(process.env.PCARE_URL, {
     waitUntil: 'networkidle2',
@@ -27,7 +25,9 @@ exports._initBrowser = async ({ that, imagePath }) => {
   await that.page.exposeFunction('onCustomEvent', async text => {
     that.writeStream = createWriteStream(that.path.join(imagePath, text));
     that.writeStream.write(that.image);
-    console.log(text);
+    await that.runocr({
+      file: that.path.join(imagePath, text)
+    })
     await that.runScript()
   });
 

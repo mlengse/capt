@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mlengse/capt#readme",
   "dependencies": {
+    "captcha-cv-ocr": "^1.1.1",
     "dotenv": "^8.2.0",
     "puppeteer-core": "^8.0.0"
   }
